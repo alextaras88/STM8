@@ -1,0 +1,384 @@
+###############################################################################
+#
+# IAR ELF Linker V3.10.1.201 for STM8                     30/Aug/2018  17:29:39
+# Copyright 2010-2017 IAR Systems AB.
+#
+#    Output file  =  
+#        C:\Users\E_M\Documents\IAR_STM8_PRJ\STM8_lcd\STM8_lcd\Debug\Exe\test_stm8.out
+#    Map file     =  
+#        C:\Users\E_M\Documents\IAR_STM8_PRJ\STM8_lcd\STM8_lcd\Debug\List\test_stm8.map
+#    Command line =  
+#        -f C:\Users\E_M\AppData\Local\Temp\EW53D8.tmp
+#        (C:\Users\E_M\Documents\IAR_STM8_PRJ\STM8_lcd\STM8_lcd\Debug\Obj\ad7799.o
+#        C:\Users\E_M\Documents\IAR_STM8_PRJ\STM8_lcd\STM8_lcd\Debug\Obj\adc.o
+#        C:\Users\E_M\Documents\IAR_STM8_PRJ\STM8_lcd\STM8_lcd\Debug\Obj\Delay.o
+#        C:\Users\E_M\Documents\IAR_STM8_PRJ\STM8_lcd\STM8_lcd\Debug\Obj\lcd1602.o
+#        C:\Users\E_M\Documents\IAR_STM8_PRJ\STM8_lcd\STM8_lcd\Debug\Obj\main.o
+#        C:\Users\E_M\Documents\IAR_STM8_PRJ\STM8_lcd\STM8_lcd\Debug\Obj\spi.o
+#        C:\Users\E_M\Documents\IAR_STM8_PRJ\STM8_lcd\STM8_lcd\Debug\Obj\System.o
+#        C:\Users\E_M\Documents\IAR_STM8_PRJ\STM8_lcd\STM8_lcd\Debug\Obj\usart.o
+#        --redirect _Printf=_PrintfFullNoMb --redirect _Scanf=_ScanfFullNoMb -o
+#        C:\Users\E_M\Documents\IAR_STM8_PRJ\STM8_lcd\STM8_lcd\Debug\Exe\test_stm8.out
+#        --map
+#        C:\Users\E_M\Documents\IAR_STM8_PRJ\STM8_lcd\STM8_lcd\Debug\List\test_stm8.map
+#        --config "C:\IAR Systems\Embedded Workbench
+#        8.0\stm8\config\lnkstm8l152c6.icf" --config_def _CSTACK_SIZE=0x100
+#        --config_def _HEAP_SIZE=0x100 --entry __iar_program_start --debug_lib)
+#
+###############################################################################
+
+*******************************************************************************
+*** RUNTIME MODEL ATTRIBUTES
+***
+
+__SystemLibrary            = DLib
+__code_model               = small
+__core                     = stm8
+__data_model               = medium
+__dlib_file_descriptor     = 0
+__dlib_full_locale_support = 0
+__rt_version               = 4
+
+
+*******************************************************************************
+*** PLACEMENT SUMMARY
+***
+
+"A0":  place at start of [0x000000-0x0000ff] { rw section .vregs };
+"A1":  place at end of [0x000000-0x0007ff] { block CSTACK };
+"A2":  place at start of [0x008000-0x00ffff] { block INTVEC };
+"P3":  place in [from 0x008000 to 0x00ffff] {
+          ro section __DLIB_PERTHREAD_init, ro section .far.data_init,
+          ro section .far_func.textrw_init, ro section .huge.data_init,
+          ro section .huge_func.textrw_init, ro section .iar.init_table,
+          ro section .init_array, ro section .near.data_init,
+          ro section .near.rodata, ro section .near_func.text,
+          ro section .near_func.textrw_init, ro section .tiny.data_init,
+          ro section .tiny.rodata_init };
+"P4":  place in [from 0x008000 to 0x00ffff] {
+          ro section .far.rodata, ro section .far_func.text };
+"P5":  place in [from 0x008000 to 0x00ffff] {
+          ro section .huge.rodata, ro section .huge_func.text };
+do not initialize {
+   rw section .eeprom.noinit, rw section .far.noinit, rw section .huge.noinit,
+   rw section .near.noinit, rw section .tiny.noinit, rw section .vregs };
+
+  Section          Kind      Address   Size  Object
+  -------          ----      -------   ----  ------
+"A0":                                  0x10
+  .vregs           uninit   0x000000   0x10  vregs.o [4]
+                          - 0x000010   0x10
+
+"A1":                                 0x100
+  CSTACK                    0x000700  0x100  <Block>
+    CSTACK         uninit   0x000700  0x100  <Block tail>
+                          - 0x000800  0x100
+
+Absolute sections, part 1 of 15:        0x5
+  .near.noinit     uninit   0x005005    0x1  ad7799.o [1]
+  .near.noinit     uninit   0x005006    0x1  ad7799.o [1]
+  .near.noinit     uninit   0x005007    0x1  spi.o [1]
+  .near.noinit     uninit   0x005008    0x1  spi.o [1]
+  .near.noinit     uninit   0x005009    0x1  spi.o [1]
+                          - 0x00500a    0x5
+
+Absolute sections, part 2 of 15:        0x3
+  .near.noinit     uninit   0x00500c    0x1  usart.o [1]
+  .near.noinit     uninit   0x00500d    0x1  System.o [1]
+  .near.noinit     uninit   0x00500e    0x1  System.o [1]
+                          - 0x00500f    0x3
+
+Absolute sections, part 3 of 15:        0x1
+  .near.noinit     uninit   0x005014    0x1  main.o [1]
+                          - 0x005015    0x1
+
+Absolute sections, part 4 of 15:        0x3
+  .near.noinit     uninit   0x005016    0x1  System.o [1]
+  .near.noinit     uninit   0x005017    0x1  System.o [1]
+  .near.noinit     uninit   0x005018    0x1  System.o [1]
+                          - 0x005019    0x3
+
+Absolute sections, part 5 of 15:        0x1
+  .near.noinit     uninit   0x00509e    0x1  spi.o [1]
+                          - 0x00509f    0x1
+
+Absolute sections, part 6 of 15:        0x1
+  .near.noinit     uninit   0x0050c0    0x1  System.o [1]
+                          - 0x0050c1    0x1
+
+Absolute sections, part 7 of 15:        0x2
+  .near.noinit     uninit   0x0050c3    0x1  usart.o [1]
+  .near.noinit     uninit   0x0050c4    0x1  System.o [1]
+                          - 0x0050c5    0x2
+
+Absolute sections, part 8 of 15:        0x1
+  .near.noinit     uninit   0x0050c6    0x1  System.o [1]
+                          - 0x0050c7    0x1
+
+Absolute sections, part 9 of 15:        0x2
+  .near.noinit     uninit   0x0050c8    0x1  System.o [1]
+  .near.noinit     uninit   0x0050c9    0x1  System.o [1]
+                          - 0x0050ca    0x2
+
+Absolute sections, part 10 of 15:       0x2
+  .near.noinit     uninit   0x005200    0x1  spi.o [1]
+  .near.noinit     uninit   0x005201    0x1  spi.o [1]
+                          - 0x005202    0x2
+
+Absolute sections, part 11 of 15:       0x2
+  .near.noinit     uninit   0x005203    0x1  spi.o [1]
+  .near.noinit     uninit   0x005204    0x1  spi.o [1]
+                          - 0x005205    0x2
+
+Absolute sections, part 12 of 15:       0x2
+  .near.noinit     uninit   0x005232    0x1  usart.o [1]
+  .near.noinit     uninit   0x005233    0x1  usart.o [1]
+                          - 0x005234    0x2
+
+Absolute sections, part 13 of 15:       0x1
+  .near.noinit     uninit   0x005235    0x1  usart.o [1]
+                          - 0x005236    0x1
+
+Absolute sections, part 14 of 15:       0x1
+  .near.noinit     uninit   0x0052e0    0x1  Delay.o [1]
+                          - 0x0052e1    0x1
+
+Absolute sections, part 15 of 15:       0x3
+  .near.noinit     uninit   0x0052e6    0x1  Delay.o [1]
+  .near.noinit     uninit   0x0052e7    0x1  Delay.o [1]
+  .near.noinit     uninit   0x0052e8    0x1  Delay.o [1]
+                          - 0x0052e9    0x3
+
+"A2":                                  0x80
+  INTVEC                    0x008000   0x80  <Block>
+    .intvec        const    0x008000   0x80  interrupt.o [4]
+                          - 0x008080   0x80
+
+"P3-P5":                              0x54b
+  .near_func.text  ro code  0x008080   0xab  vreg_util.o [4]
+  .near_func.text  ro code  0x00812b   0xa0  lcd1602.o [1]
+  .near_func.text  ro code  0x0081cb   0x80  ad7799.o [1]
+  .near_func.text  ro code  0x00824b   0x50  lcd1602.o [1]
+  .near_func.text  ro code  0x00829b   0x49  lcd1602.o [1]
+  .near_func.text  ro code  0x0082e4   0x3e  spi.o [1]
+  .near_func.text  ro code  0x008322   0x38  ad7799.o [1]
+  .near_func.text  ro code  0x00835a   0x34  lcd1602.o [1]
+  .near_func.text  ro code  0x00838e   0x34  lcd1602.o [1]
+  .near_func.text  ro code  0x0083c2   0x31  spi.o [1]
+  .near_func.text  ro code  0x0083f3   0x2c  long.o [4]
+  .near_func.text  ro code  0x00841f   0x2b  lcd1602.o [1]
+  .near_func.text  ro code  0x00844a   0x28  main.o [1]
+  .near_func.text  ro code  0x008472   0x28  System.o [1]
+  .near_func.text  ro code  0x00849a   0x27  ad7799.o [1]
+  .near_func.text  ro code  0x0084c1   0x21  usart.o [1]
+  .near_func.text  ro code  0x0084e2   0x20  spi.o [1]
+  .near_func.text  ro code  0x008502   0x19  System.o [1]
+  .near_func.text  ro code  0x00851b   0x17  Delay.o [1]
+  .near_func.text  ro code  0x008532   0x17  spi.o [1]
+  .near_func.text  ro code  0x008549   0x14  init.o [4]
+  .near_func.text  ro code  0x00855d   0x14  __dbg_xxexit.o [3]
+  .near_func.text  ro code  0x008571   0x13  cstartup.o [4]
+  .near_func.text  ro code  0x008584   0x12  Delay.o [1]
+  .near_func.text  ro code  0x008596    0xe  Delay.o [1]
+  .near.rodata     const    0x0085a4    0xd  main.o [1]
+  .near_func.text  ro code  0x0085b1    0x8  lcd1602.o [1]
+  .near_func.text  ro code  0x0085b9    0x5  cexit.o [4]
+  .near_func.text  ro code  0x0085be    0x3  interrupt.o [4]
+  .near_func.text  ro code  0x0085c1    0x3  low_level_init.o [4]
+  .near_func.text  ro code  0x0085c4    0x3  exit.o [4]
+  .near_func.text  ro code  0x0085c7    0x3  unhandled_exception.o [4]
+  .near_func.text  ro code  0x0085ca    0x1  __dbg_break.o [3]
+                          - 0x0085cb  0x54b
+
+
+
+*******************************************************************************
+*** MODULE SUMMARY
+***
+
+    Module                 ro code  ro data  rw data  rw data
+                                                       (abs)
+    ------                 -------  -------  -------  -------
+C:\Users\E_M\Documents\IAR_STM8_PRJ\STM8_lcd\STM8_lcd\Debug\Obj: [1]
+    Delay.o                     55                          4
+    System.o                    65                         10
+    ad7799.o                   223                          2
+    lcd1602.o                  468
+    main.o                      40       13                 1
+    spi.o                      166                          8
+    usart.o                     33                          5
+    ---------------------------------------------------------
+    Total:                   1 050       13                30
+
+command line: [2]
+    ---------------------------------------------------------
+    Total:
+
+dbgstm8smd.a: [3]
+    __dbg_break.o                1
+    __dbg_xxexit.o              20
+    ---------------------------------------------------------
+    Total:                      21
+
+dlstm8smn.a: [4]
+    cexit.o                      5
+    cstartup.o                  19
+    exit.o                       3
+    init.o                      20
+    interrupt.o                  3      128
+    long.o                      44
+    low_level_init.o             3
+    unhandled_exception.o        3
+    vreg_util.o                171
+    vregs.o                                       16
+    ---------------------------------------------------------
+    Total:                     271      128       16
+
+    Linker created                               256
+-------------------------------------------------------------
+    Grand Total:             1 342      141      272       30
+
+
+*******************************************************************************
+*** ENTRY LIST
+***
+
+Entry                    Address  Size  Type      Object
+-----                    -------  ----  ----      ------
+?add32_l0_l0_0x         0x0083f6        Code  Gb  long.o [4]
+?add32_l0_l0_l1         0x0083f3        Code  Gb  long.o [4]
+?b0                     0x000000        Data  Gb  vregs.o [4]
+?b1                     0x000001        Data  Gb  vregs.o [4]
+?b10                    0x00000a        Data  Gb  vregs.o [4]
+?b11                    0x00000b        Data  Gb  vregs.o [4]
+?b12                    0x00000c        Data  Gb  vregs.o [4]
+?b13                    0x00000d        Data  Gb  vregs.o [4]
+?b14                    0x00000e        Data  Gb  vregs.o [4]
+?b15                    0x00000f        Data  Gb  vregs.o [4]
+?b2                     0x000002        Data  Gb  vregs.o [4]
+?b3                     0x000003        Data  Gb  vregs.o [4]
+?b4                     0x000004        Data  Gb  vregs.o [4]
+?b5                     0x000005        Data  Gb  vregs.o [4]
+?b6                     0x000006        Data  Gb  vregs.o [4]
+?b7                     0x000007        Data  Gb  vregs.o [4]
+?b8                     0x000008        Data  Gb  vregs.o [4]
+?b9                     0x000009        Data  Gb  vregs.o [4]
+?e0                     0x000001        Data  Gb  vregs.o [4]
+?e1                     0x000005        Data  Gb  vregs.o [4]
+?e2                     0x000009        Data  Gb  vregs.o [4]
+?e3                     0x00000d        Data  Gb  vregs.o [4]
+?epilogue_l2            0x0080ef        Code  Gb  vreg_util.o [4]
+?epilogue_l2_l3         0x0080ec        Code  Gb  vreg_util.o [4]
+?epilogue_w4            0x0080f3        Code  Gb  vreg_util.o [4]
+?l0                     0x000000        Data  Gb  vregs.o [4]
+?l1                     0x000004        Data  Gb  vregs.o [4]
+?l2                     0x000008        Data  Gb  vregs.o [4]
+?l3                     0x00000c        Data  Gb  vregs.o [4]
+?mov_e0_e2              0x0080fa        Code  Gb  vreg_util.o [4]
+?mov_e1_e0              0x008107        Code  Gb  vreg_util.o [4]
+?mov_e1_e3              0x008114        Code  Gb  vreg_util.o [4]
+?mov_e2_e0              0x008121        Code  Gb  vreg_util.o [4]
+?mov_l0_l2              0x0080f7        Code  Gb  vreg_util.o [4]
+?mov_l1_l0              0x008104        Code  Gb  vreg_util.o [4]
+?mov_l1_l3              0x008111        Code  Gb  vreg_util.o [4]
+?mov_l2_l0              0x00811e        Code  Gb  vreg_util.o [4]
+?mov_w1_w5              0x0080fd        Code  Gb  vreg_util.o [4]
+?mov_w3_w1              0x00810a        Code  Gb  vreg_util.o [4]
+?mov_w3_w7              0x008117        Code  Gb  vreg_util.o [4]
+?mov_w5_w1              0x008124        Code  Gb  vreg_util.o [4]
+?pop_l2                 0x0080ce        Code  Gb  vreg_util.o [4]
+?pop_l3                 0x0080d9        Code  Gb  vreg_util.o [4]
+?pop_w4                 0x008098        Code  Gb  vreg_util.o [4]
+?push_l2                0x0080a7        Code  Gb  vreg_util.o [4]
+?push_l3                0x0080ac        Code  Gb  vreg_util.o [4]
+?push_w4                0x008080        Code  Gb  vreg_util.o [4]
+?sll32_0x_0x_a          0x008411        Code  Gb  long.o [4]
+?sll32_l0_l0_a          0x00840e        Code  Gb  long.o [4]
+?w0                     0x000000        Data  Gb  vregs.o [4]
+?w1                     0x000002        Data  Gb  vregs.o [4]
+?w2                     0x000004        Data  Gb  vregs.o [4]
+?w3                     0x000006        Data  Gb  vregs.o [4]
+?w4                     0x000008        Data  Gb  vregs.o [4]
+?w5                     0x00000a        Data  Gb  vregs.o [4]
+?w6                     0x00000c        Data  Gb  vregs.o [4]
+?w7                     0x00000e        Data  Gb  vregs.o [4]
+CLK_SWR                 0x0050c8   0x1  Data  Gb  System.o [1]
+CSTACK$$Base            0x000700         --   Gb  - Linker created -
+CSTACK$$Limit           0x000800         --   Gb  - Linker created -
+Clock_Init              0x008472  0x28  Code  Gb  System.o [1]
+Delay_Init              0x00851b  0x17  Code  Gb  Delay.o [1]
+GPIO_Init               0x008502  0x19  Code  Gb  System.o [1]
+INTVEC$$Base            0x008000         --   Gb  - Linker created -
+INTVEC$$Limit           0x008080         --   Gb  - Linker created -
+Region$$Table$$Base   0x00000000         --   Gb  - Linker created -
+Region$$Table$$Limit  0x00000000         --   Gb  - Linker created -
+SPI1_DR                 0x005204   0x1  Data  Gb  spi.o [1]
+_A_CLK_CKDIVR           0x0050c0   0x1  Data  Gb  System.o [1]
+_A_CLK_ECKR             0x0050c6   0x1  Data  Gb  System.o [1]
+_A_CLK_PCKENR1          0x0050c3   0x1  Data  Gb  usart.o [1]
+_A_CLK_PCKENR2          0x0050c4   0x1  Data  Gb  System.o [1]
+_A_CLK_SWCR             0x0050c9   0x1  Data  Gb  System.o [1]
+_A_PB_CR1               0x005008   0x1  Data  Gb  spi.o [1]
+_A_PB_CR2               0x005009   0x1  Data  Gb  spi.o [1]
+_A_PB_DDR               0x005007   0x1  Data  Gb  spi.o [1]
+_A_PB_IDR               0x005006   0x1  Data  Gb  ad7799.o [1]
+_A_PB_ODR               0x005005   0x1  Data  Gb  ad7799.o [1]
+_A_PC_CR1               0x00500d   0x1  Data  Gb  System.o [1]
+_A_PC_CR2               0x00500e   0x1  Data  Gb  System.o [1]
+_A_PC_DDR               0x00500c   0x1  Data  Gb  usart.o [1]
+_A_PE_CR1               0x005017   0x1  Data  Gb  System.o [1]
+_A_PE_CR2               0x005018   0x1  Data  Gb  System.o [1]
+_A_PE_DDR               0x005016   0x1  Data  Gb  System.o [1]
+_A_PE_ODR               0x005014   0x1  Data  Gb  main.o [1]
+_A_SPI1_CR1             0x005200   0x1  Data  Gb  spi.o [1]
+_A_SPI1_CR2             0x005201   0x1  Data  Gb  spi.o [1]
+_A_SPI1_SR              0x005203   0x1  Data  Gb  spi.o [1]
+_A_SYSCFG_RMPCR1        0x00509e   0x1  Data  Gb  spi.o [1]
+_A_TIM4_CNTR            0x0052e7   0x1  Data  Gb  Delay.o [1]
+_A_TIM4_CR1             0x0052e0   0x1  Data  Gb  Delay.o [1]
+_A_TIM4_EGR             0x0052e6   0x1  Data  Gb  Delay.o [1]
+_A_TIM4_PSCR            0x0052e8   0x1  Data  Gb  Delay.o [1]
+_A_USART1_BRR1          0x005232   0x1  Data  Gb  usart.o [1]
+_A_USART1_BRR2          0x005233   0x1  Data  Gb  usart.o [1]
+_A_USART1_CR2           0x005235   0x1  Data  Gb  usart.o [1]
+__DebugBreak            0x0085ca   0x1  Code  Gb  __dbg_break.o [3]
+__exit                  0x00855d  0x14  Code  Gb  __dbg_xxexit.o [3]
+__iar_data_init2        0x008549  0x14  Code  Gb  init.o [4]
+__iar_program_start     0x008571        Code  Gb  cstartup.o [4]
+__iar_unhandled_exception
+                        0x0085c7        Code  Gb  unhandled_exception.o [4]
+__intvec                0x008000        Data  Gb  interrupt.o [4]
+__low_level_init        0x0085c1   0x3  Code  Gb  low_level_init.o [4]
+_exit                   0x0085b9        Code  Gb  cexit.o [4]
+ad7799_Init             0x008322  0x38  Code  Gb  ad7799.o [1]
+ad7799_Reset            0x00849a  0x27  Code  Gb  ad7799.o [1]
+ad7799_get_data         0x0081cb  0x80  Code  Gb  ad7799.o [1]
+delay_ms                0x008584  0x12  Code  Gb  Delay.o [1]
+delay_us                0x008596   0xe  Code  Gb  Delay.o [1]
+exit                    0x0085c4   0x3  Code  Gb  exit.o [4]
+gpio_spi_Init           0x0083c2  0x31  Code  Gb  spi.o [1]
+lcd1602_Command         0x00835a  0x34  Code  Gb  lcd1602.o [1]
+lcd1602_Data            0x00838e  0x34  Code  Gb  lcd1602.o [1]
+lcd1602_GPIOInit        0x00829b  0x49  Code  Gb  lcd1602.o [1]
+lcd1602_Init            0x00812b  0xa0  Code  Gb  lcd1602.o [1]
+lcd1602_SendChar        0x0085b1   0x8  Code  Gb  lcd1602.o [1]
+lcd1602_String          0x00841f  0x2b  Code  Gb  lcd1602.o [1]
+lcd1602_WriteData       0x00824b  0x50  Code  Gb  lcd1602.o [1]
+main                    0x00844a  0x28  Code  Gb  main.o [1]
+spi_Init                0x0082e4  0x3e  Code  Gb  spi.o [1]
+spi_read_data           0x0084e2  0x20  Code  Gb  spi.o [1]
+spi_write_data          0x008532  0x17  Code  Gb  spi.o [1]
+usart_Init              0x0084c1  0x21  Code  Gb  usart.o [1]
+
+
+[1] = C:\Users\E_M\Documents\IAR_STM8_PRJ\STM8_lcd\STM8_lcd\Debug\Obj
+[2] = command line
+[3] = dbgstm8smd.a
+[4] = dlstm8smn.a
+
+  1 342 bytes of readonly  code memory
+    141 bytes of readonly  data memory
+    272 bytes of readwrite data memory (+ 30 absolute)
+
+Errors: none
+Warnings: none
