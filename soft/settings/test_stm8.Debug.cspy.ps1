@@ -23,9 +23,9 @@ param([String]$debugfile = "");
 
 if ($debugfile -eq "")
 {
-& "C:\IAR Systems\Embedded Workbench 8.0\common\bin\cspybat" -f "C:\Users\E_M\Documents\IAR_STM8_PRJ\STM8_lcd\STM8_lcd\settings\test_stm8.Debug.general.xcl" --backend -f "C:\Users\E_M\Documents\IAR_STM8_PRJ\STM8_lcd\STM8_lcd\settings\test_stm8.Debug.driver.xcl" 
+& "C:\IAR Systems\Embedded Workbench 8.0\common\bin\cspybat" -f "C:\Users\E_M\Desktop\f103_PRJ\STM8\soft\settings\test_stm8.Debug.general.xcl" --backend -f "C:\Users\E_M\Desktop\f103_PRJ\STM8\soft\settings\test_stm8.Debug.driver.xcl" 
 }
 else
 {
-& "C:\IAR Systems\Embedded Workbench 8.0\common\bin\cspybat" -f "C:\Users\E_M\Documents\IAR_STM8_PRJ\STM8_lcd\STM8_lcd\settings\test_stm8.Debug.general.xcl" --debug_file=$debugfile --backend -f "C:\Users\E_M\Documents\IAR_STM8_PRJ\STM8_lcd\STM8_lcd\settings\test_stm8.Debug.driver.xcl" 
+& "C:\IAR Systems\Embedded Workbench 8.0\common\bin\cspybat" -f "C:\Users\E_M\Desktop\f103_PRJ\STM8\soft\settings\test_stm8.Debug.general.xcl" --debug_file=$debugfile --backend -f "C:\Users\E_M\Desktop\f103_PRJ\STM8\soft\settings\test_stm8.Debug.driver.xcl" 
 }

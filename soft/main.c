@@ -12,7 +12,7 @@ int main( void ){
   usart_Init();
   
   ad7799_Init();
-  void ad7799_set_ch_1();
+  ad7799_set_ch_1();
   
   lcd1602_Init();
   lcd1602_String("STM8L152C6T6");
@@ -23,7 +23,7 @@ int main( void ){
   
   while(1){
     
-    ad7799_get_data();
+    adc = ad7799_get_data();
     PE_ODR ^= MASK_PE_ODR_ODR7;
     
     
